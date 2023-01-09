@@ -6,11 +6,11 @@ import { EntityBase } from "./entityBase";
 @Entity()
 export class User extends EntityBase {
 
-    @Column()
+    @Column()gi
     firstname: string;
 
     @Column()
-    lastname: string;
+    lastname: string;git remote
 
     @Column()
     email: string;
