@@ -1,16 +1,16 @@
-import { Column, Entity } from "typeorm";
-// import { Content } from "./content.entity";
-// import { ContentDto } from "../../../backend-refresher-1.0-dtos/src/dtos/content.dto"
+import { Column, Entity,OneToMany } from "typeorm";
+import { Content } from "./content.entity";
+import {ContentDto} from "../../../dtos/src/dto/content.dto"
 import { EntityBase } from "./entityBase";
 
 @Entity()
 export class User extends EntityBase {
 
-    @Column()gi
+    @Column()
     firstname: string;
 
     @Column()
-    lastname: string;git remote
+    lastname: string;
 
     @Column()
     email: string;
@@ -21,7 +21,7 @@ export class User extends EntityBase {
     @Column()
     password: string;
 
-    // @OneToMany(()=>Content,content=>content.user)
-    // contents: ContentDto[];
+    @OneToMany(()=>Content,content=>content.user)
+    contents: ContentDto[];
 
 }
